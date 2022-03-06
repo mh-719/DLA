@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import DropDown from './DropDown';
 import StartButton from './StartButton';
 import ResetButton from './ResetButton';
 import { attractorTypes, particleSizes } from '../models/options';
@@ -16,6 +17,18 @@ const Controls = () => {
   return (
     <React.Fragment>
       <div className="controls row-1">
+        <DropDown
+          width={140}
+          options={attractorTypes}
+          selection={attractor}
+          label="Attractor Type"
+        />
+        <DropDown
+          width={130}
+          options={particleSizes}
+          selection={particle}
+          label="Particle Size"
+        />
         <div className="start-reset">
           <StartButton
             simulation={simulation}
