@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import DropDown from './DropDown';
 import StartButton from './StartButton';
 import ResetButton from './ResetButton';
+import Slider from './Slider';
 import { attractorTypes, particleSizes } from '../models/options';
 import '../styles/Controls.css';
 
@@ -45,7 +46,9 @@ const Controls = () => {
           />
         </div>
       </div>
-      <div className="controls row-2"></div>
+      <div className="controls row-2">
+        <Slider probability={probability} />
+      </div>
     </React.Fragment>
   );
 };
